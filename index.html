@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>apple css animate</title>
+    <link rel="stylesheet" href="apple.css">
+</head>
+<style>
+  .box {
+    width: 600px;
+    height: 600px;
+    border: 1px solid #ff6700;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .box::before, .box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 600px 1500px;
+    height: 1500px;
+    width: 600px;
+    background-image: url("bg.jpg");
+    -webkit-animation-duration: 160s;
+    animation-duration: 160s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.box::before {
+    -webkit-animation-name: Before;
+    animation-name: Before;
+}
+.box::after {
+    -webkit-animation-name: After;
+    animation-name: After;
+}
+</style>
+<body>
+<div class="box"></div>
+</html>
